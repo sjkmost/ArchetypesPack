@@ -21,12 +21,10 @@
 
   <ItemGroup>
     <None Remove="Config\Blueprints.json" />
-    <None Remove="Localization\LocalizationPack.json" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Config\Blueprints.json" />
-    <EmbeddedResource Include="Localization\LocalizationPack.json" />
   </ItemGroup>
 
   <ItemGroup>

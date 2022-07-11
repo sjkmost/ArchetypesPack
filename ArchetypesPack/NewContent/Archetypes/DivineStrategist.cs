@@ -38,17 +38,14 @@ namespace ArchetypesPack.NewContent.Archetypes {
     static class DivineStrategist {
 
         private static readonly BlueprintAbility Aid = BlueprintTools.GetBlueprint<BlueprintAbility>("03a9630394d10164a9410882d31572f0");
+        private static readonly BlueprintAbility Foresight = BlueprintTools.GetBlueprint<BlueprintAbility>("1f01a098d737ec6419aedc4e7ad61fdd");
+        private static readonly BlueprintAbility HuntersBondAbility = BlueprintTools.GetBlueprint<BlueprintAbility>("cd80ea8a7a07a9d4cb1a54e67a9390a5");
         private static readonly BlueprintAbility LuckDomainBaseAbility = BlueprintTools.GetBlueprint<BlueprintAbility>("9af0b584f6f754045a0a79293d100ab3");
         private static readonly BlueprintAbility TrueStrike = BlueprintTools.GetBlueprint<BlueprintAbility>("2c38da66e5a599347ac95b3294acbe00");
 
         private static readonly BlueprintBuff LuckDomainBaseBuff = BlueprintTools.GetBlueprint<BlueprintBuff>("3bc40c9cbf9a0db4b8b43d8eedf2e6ec");
 
         private static readonly BlueprintCharacterClass ClericClass = BlueprintTools.GetBlueprint<BlueprintCharacterClass>("67819271767a9dd4fbfd4ae700befea0");
-
-        private static readonly BlueprintBuff HeroismBuff = BlueprintTools.GetBlueprint<BlueprintBuff>("87ab2fed7feaaff47b62a3320a57ad8d");
-        private static readonly BlueprintAbilityAreaEffect GloryDomainGreaterArea = BlueprintTools.GetBlueprint<BlueprintAbilityAreaEffect>("dc623fb49e4658f43b32bed21dafc38c");
-        private static readonly BlueprintAbilityAreaEffect AeonAura = BlueprintTools.GetBlueprint<BlueprintAbilityAreaEffect>("2b6a9f8c38c03b441a0473b61016473b");
-        private static readonly BlueprintFeature WeaponBondAdditionalUse = BlueprintTools.GetBlueprint<BlueprintFeature>("5a64de5435667da4eae2e4c95ec87917");
 
         private static readonly BlueprintFeatureSelection ChannelEnergySelection = BlueprintTools.GetBlueprint<BlueprintFeatureSelection>("d332c1748445e8f4f9e92763123e31bd");
         private static readonly BlueprintFeatureSelection SecondDomainsSelection = BlueprintTools.GetBlueprint<BlueprintFeatureSelection>("43281c3d7fe18cc4d91928395837cd1e");
@@ -129,6 +126,7 @@ namespace ArchetypesPack.NewContent.Archetypes {
                     c.m_Buff = MasterTacticianAreaBuff.ToReference<BlueprintBuffReference>();
                 });
                 bp.ReapplyOnLevelUp = true;
+                bp.m_Icon = Foresight.m_Icon;
             });
 
             var MasterTacticianCapstone = Helpers.CreateBlueprint<BlueprintFeature>(APContext, "MasterTacticianCapstone", bp => {
@@ -139,6 +137,7 @@ namespace ArchetypesPack.NewContent.Archetypes {
                     c.Replace = true;
                     c.RollResult = 20;
                 });
+                bp.m_Icon = Foresight.m_Icon;
             });
 
             var TacticalExpertiseBuff = Helpers.CreateBlueprint<BlueprintBuff>(APContext, "TacticalExpertiseBuff", bp => {
@@ -340,7 +339,8 @@ namespace ArchetypesPack.NewContent.Archetypes {
                 });
                 bp.AddComponent<RecalculateOnStatChange>(c => {
                     c.Stat = StatType.Intelligence;
-                });               
+                });
+                bp.m_Icon = TrueStrike.m_Icon;
             });
 
             var CasterSupportBuffDivine = Helpers.CreateBlueprint<BlueprintBuff>(APContext, "CasterSupportBuffDivine", bp => {
@@ -457,7 +457,7 @@ namespace ArchetypesPack.NewContent.Archetypes {
                     };
                 });
                 bp.AddComponent<ContextCalculateSharedValue>(c => {
-                    c.ValueType = AbilitySharedValue.StatBonus;
+                    c.ValueType = AbilitySharedValue.DamageBonus;
                     c.Value = new ContextDiceValue() {
                         DiceCountValue = 0,
                         BonusValue = new ContextValue() {
@@ -470,7 +470,7 @@ namespace ArchetypesPack.NewContent.Archetypes {
                 });
                 bp.AddComponent<AbilitySpawnFx>(c => {
                     c.PrefabLink = new PrefabLink() {
-                        AssetId = "34306172e3b0f33478ac715ca9ac7b4a"
+                        AssetId = "749bb96fb50ee5b4685645472d718465"
                     };
                     c.Anchor = AbilitySpawnFxAnchor.SelectedTarget;
                 });
@@ -485,7 +485,7 @@ namespace ArchetypesPack.NewContent.Archetypes {
                 bp.LocalizedDuration = LuckDomainBaseAbility.LocalizedDuration;
                 bp.LocalizedSavingThrow = new LocalizedString();
                 bp.ResourceAssetIds = new string[] {
-                    "34306172e3b0f33478ac715ca9ac7b4a"
+                    "749bb96fb50ee5b4685645472d718465"
                 };
             });
 
@@ -499,6 +499,7 @@ namespace ArchetypesPack.NewContent.Archetypes {
                         CasterSupportAbility.ToReference<BlueprintUnitFactReference>()
                     };
                 });
+                bp.m_Icon = HuntersBondAbility.m_Icon;
             });
 
             var DivineStrategistArchetype = Helpers.CreateBlueprint<BlueprintArchetype>(APContext, "DivineStrategistArchetype", bp => {
@@ -513,6 +514,13 @@ namespace ArchetypesPack.NewContent.Archetypes {
                     Helpers.CreateLevelEntry(1, CasterSupportFeature), 
                     Helpers.CreateLevelEntry(8, TacticalExpertiseFeature),
                     Helpers.CreateLevelEntry(20, MasterTacticianCapstone)
+                };
+                bp.OverrideAttributeRecommendations = true;
+                bp.RecommendedAttributes = new StatType[] {
+                    StatType.Intelligence, 
+                    StatType.Wisdom
+                };
+                bp.NotRecommendedAttributes = new StatType[] {
                 };
             });
 

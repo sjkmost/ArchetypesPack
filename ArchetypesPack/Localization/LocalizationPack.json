@@ -1,3 +1,114 @@
-﻿{
-	"LocalizedStrings": []
+{
+  "LocalizedStrings": [
+    {
+      "Key": "26415f7ab16647cc9376a94343d35441",
+      "SimpleName": "CasterSupportBuffDivine.Name",
+      "ProcessTemplates": false,
+      "enGB": "Caster Support",
+      "ruRU": null,
+      "deDE": null,
+      "frFR": null,
+      "zhCN": "支援施法",
+      "esES": null
+    },
+    {
+      "Key": "0ec1922064624d6fb95469172f13e565",
+      "SimpleName": "CasterSupportFeature.Description",
+      "ProcessTemplates": true,
+      "enGB": "A divine strategist can use a standard action to assist another divine spellcaster, granting a +2 circumstance bonus on caster level checks and concentration checks until the beginning of the divine strategist’s next turn. This bonus increases by +1 at 4th level and every four levels thereafter (to a maximum of +7 at 20th level). Caster support can be used to assist arcane spellcasters or characters using magical items, but they gain only half the normal bonus.",
+      "ruRU": null,
+      "deDE": null,
+      "frFR": null,
+      "zhCN": "天策使可以使用一个标准动作帮助另一个神术施法者，使其在下一轮的施法者等级检定和专注检定上获得+2环境加值。这个加值会在4级和之后每提升4级时+1（在20级时达到最大值+7）。此能力可用于支援奥术施法者或角色使用魔法物品，但加值只有如上的一半。",
+      "esES": null
+    },
+    {
+      "Key": "77318e5dc4c24892b6cc08e7dd140980",
+      "SimpleName": "DivineStrategistArchetype.Description",
+      "ProcessTemplates": true,
+      "enGB": "The divine strategist leads the armies of the faithful, not from the front lines but through her clever strategy and tactical acumen.",
+      "ruRU": null,
+      "deDE": null,
+      "frFR": null,
+      "zhCN": "善用兵者，奇正在人而已。变而神之，所以推乎天也。",
+      "esES": null
+    },
+    {
+      "Key": "fd5723b36fea4f9c8291705681807167",
+      "SimpleName": "DivineStrategistArchetype.Name",
+      "ProcessTemplates": false,
+      "enGB": "Divine Strategist",
+      "ruRU": null,
+      "deDE": null,
+      "frFR": null,
+      "zhCN": "天策使",
+      "esES": null
+    },
+    {
+      "Key": "5305bdcef77b49cda8561b8bbd9a9f4c",
+      "SimpleName": "MasterTacticianFeature.Description",
+      "ProcessTemplates": true,
+      "enGB": "A divine strategist gains a bonus on initiative checks equal to 1/2 her cleric level. At 20th level, a divine strategist’s initiative roll is automatically a natural 20. Allies able to see and hear the divine strategist gain a bonus on initiative checks equal to 1/4 the divine strategist’s level.",
+      "ruRU": null,
+      "deDE": null,
+      "frFR": null,
+      "zhCN": "天策使在先攻检定上获得等于她1/2牧师等级的加值。达到20级后，天策使总是在先攻检定中投出自然20。视线内能听到天策使话语的盟友在先攻检定上获得等于她1/4牧师等级的加值。",
+      "esES": null
+    },
+    {
+      "Key": "aafdb40ebb10415abbaf5aae2f63e881",
+      "SimpleName": "MasterTacticianFeature.Name",
+      "ProcessTemplates": false,
+      "enGB": "Master Tactician",
+      "ruRU": null,
+      "deDE": null,
+      "frFR": null,
+      "zhCN": "战策大师",
+      "esES": null
+    },
+    {
+      "Key": "53356d6ff9f148689e33d594355af3f6",
+      "SimpleName": "MasterTacticianFinalFeature.Description",
+      "ProcessTemplates": true,
+      "enGB": "At 20th level, a divine strategist’s initiative roll is automatically a natural 20.",
+      "ruRU": null,
+      "deDE": null,
+      "frFR": null,
+      "zhCN": "达到20级后，天策使总是在先攻检定中投出自然20。",
+      "esES": null
+    },
+    {
+      "Key": "3bd8d3097c8a43aba2a352603da4bdb7",
+      "SimpleName": "TacticalExpertiseBuff.Description",
+      "ProcessTemplates": true,
+      "enGB": "At 8th level, a divine strategist knows how to take best advantage of tactical opportunities. Once per day as a swift action she may add her Intelligence modifier as a bonus on any single d20 roll. She can use this ability one additional time per day for every two levels after 8th.",
+      "ruRU": null,
+      "deDE": null,
+      "frFR": null,
+      "zhCN": "达到8级后，天策使领悟了如何最优地利用战场机会的能力。每天一次以一个迅捷动作，她可以将她的智力加值加到任意一个d20上。8级后每提升2级，她每天可使用该能力的次数就提升一次。",
+      "esES": null
+    },
+    {
+      "Key": "fda16d7353a2447b8cd4d0c42be89366",
+      "SimpleName": "TacticalExpertiseFeature.Description",
+      "ProcessTemplates": true,
+      "enGB": "At 8th level, a divine strategist knows how to take best advantage of tactical opportunities. Whenever she is flanking or makes an attack of opportunity, she may add her Intelligence bonus (if any) as a bonus on the attack roll. In addition, once per day as a swift action she may add her Intelligence modifier as a bonus on any single d20 roll. She can use this ability one additional time per day for every two levels after 8th.",
+      "ruRU": null,
+      "deDE": null,
+      "frFR": null,
+      "zhCN": "达到8级后，天策使领悟了如何最优地利用战场机会的能力。在夹击或借机攻击时，她可以将她的智力加值（如果有）加到攻击检定上。另外，每天一次以一个迅捷动作，她可以将她的智力加值加到任意一个d20上。8级后每提升2级，她每天可使用该能力的次数就提升一次。",
+      "esES": null
+    },
+    {
+      "Key": "5c4dca2458b5439ba62b143092835507",
+      "SimpleName": "TacticalExpertiseFeature.Name",
+      "ProcessTemplates": false,
+      "enGB": "Tactical Expertise",
+      "ruRU": null,
+      "deDE": null,
+      "frFR": null,
+      "zhCN": "战术专家",
+      "esES": null
+    }
+  ]
 }
