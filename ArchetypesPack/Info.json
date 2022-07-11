@@ -1,0 +1,11 @@
+﻿{
+  "Id": "ArchetypesPack",
+  "DisplayName": "ArchetypesPack",
+  "Author": "kchgod",
+  "Version": "1.0.0",
+  "ManagerVersion": "0.24.2",
+  "Requirements": [ "TabletopTweaks-Core" ],
+  "LoadAfter": [ "TabletopTweaks-Core" ],
+  "AssemblyName": "ArchetypesPack.dll",
+  "EntryMethod": "ArchetypesPack.Main.Load"
+}
